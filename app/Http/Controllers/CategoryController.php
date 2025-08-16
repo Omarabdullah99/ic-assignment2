@@ -10,8 +10,8 @@ class CategoryController extends Controller
 {
     function index()
     {
-        return view('categories.index',[
-             'categories' => Category::latest()->paginate(10),
+        return view('categories.index', [
+            'categories' => Category::paginate(10),
         ]);
     }
 
@@ -20,13 +20,21 @@ class CategoryController extends Controller
         return view('categories.create');
     }
 
+    function show(Category $category)
+    {
+        return view('posts.show', [
+            'posts' => $category->posts()->latest()->paginate(10),
+            'category'=> $category
+        ]);
+    }
+
     function store(StoreCategoryRequest $request)
     {
         $validated = $request->validated();
         $validated['slug'] = str($validated['name'])->slug();
-        $category= Category::create($validated);
+        $category = Category::create($validated);
 
-        if($category){
+        if ($category) {
             return redirect()->route('categories.index')->with('success', 'Category created successfully');
         }
     }
