@@ -31,12 +31,12 @@
                             <i class="fas fa-chevron-down ml-auto text-xs"></i>
                         </button>
                         <div class="sidebar-dropdown-menu hidden pl-2 mt-1 space-y-1">
-                            <a href="./category-create.html"
+                            <a href="{{route('categories.create')}}"
                                 class="flex items-center px-3 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white pl-11">
                                 <i class="fas fa-pen mr-3 text-xs"></i>
                                 <span>Create Category</span>
                             </a>
-                            <a href="./category-list.html"
+                            <a href="{{route('categories.index')}}"
                                 class="flex items-center px-3 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white pl-11">
                                 <i class="fas fa-pen mr-3 text-xs"></i>
                                 <span>Category List</span>
