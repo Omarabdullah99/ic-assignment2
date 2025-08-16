@@ -10,7 +10,9 @@ class CategoryController extends Controller
 {
     function index()
     {
-        return view('categories.index');
+        return view('categories.index',[
+             'categories' => Category::latest()->paginate(10),
+        ]);
     }
 
     function create()
