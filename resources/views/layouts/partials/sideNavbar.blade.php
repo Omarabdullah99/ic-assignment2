@@ -2,13 +2,11 @@
   <aside class="bg-gray-800 text-white flex-shrink-0 w-64 relative z-10 flex flex-col" id="sidebar">
       <!-- side header section start -->
       <div class="flex items-center justify-between h-16 px-4 border-b border-gray-700">
-          <div class="flex items-center space-x-2">
+        <a href="{{route('dashboard.index')}}"> <div class="flex items-center space-x-2">
               <i class="fas fa-blog text-2xl text-blue-400"></i>
               <h1 class="text-xl font-bold">I<span class="text-blue-400">Blog</span></h1>
-          </div>
-          <button id="sidebar-toggle" class="text-gray-400 hover:text-white md:hidden">
-              <i class="fas fa-times"></i>
-          </button>
+          </div> </a>
+
       </div>
       <!-- side header section end -->
 

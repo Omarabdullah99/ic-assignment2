@@ -50,8 +50,7 @@
 
                                 <a href="{{ route('categories.show', $category->slug) }}"
                                     class="text-green-600 hover:text-green-900 mr-2">View</a>
-                                <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-2">Edit</a>
-                                <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
+                              
                             </td>
                         </tr>
 
